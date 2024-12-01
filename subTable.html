@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="subTable.module.css" />
+  <script defer src="./subTable.js"></script>
+</head>
+
+<body>
+
+  <div class="subTable" data-config="[{ 'label': 'Qtd', 'size': '1.3fr', 'field': { 'name':'q', 'type': 'input', 'origin': null, 'format': ['float', 2], 'acumulator': null, 'pattern': '^\\d+(,\\d{1,2})?$', 'required': true } }, { 'label': 'Descrição', 'size': '7fr', 'field': {'name':'d', 'type': 'input', 'origin': null, 'format': ['text', null], 'acumulator': 'count', 'pattern': '', 'required': true } }, { 'label': 'Unidade', 'size': '1.2fr', 'field': {'name':'u', 'type': 'select', 'origin': [{ 'value': 'Maço', 'label': 'Maço' }, { 'value': 'Kg', 'label': 'Kg' }], 'format': ['text', null], 'acumulator': null, 'pattern': '', 'required': true } }, { 'label': 'Valor Unitário', 'size': '3fr', 'field': {'name':'vu', 'type': 'input', 'origin': null, 'format': ['currency', 2], 'acumulator': null, 'pattern': '^\\d+(,\\d{1,2})?$', 'required': true } }, { 'label': 'Valor Total', 'size': '3fr', 'field': {'name':'vt', 'type': 'calculated', 'origin': [0, '*', 3], 'format': ['currency', 2], 'acumulator': 'amount', 'pattern': '', 'required': true } }, { 'label': 'Perc. Contrat', 'size': '3fr', 'field': {'name':'p', 'type': 'input', 'origin': null, 'format': ['percent', 2], 'acumulator': null, 'pattern': '', 'required': true } }, { 'label': 'Cronograma', 'size': '3fr', 'field': {'name':'c', 'type': 'select', 'origin': [{ 'value': 'Quinzenal', 'label': 'Quinzenal' }, { 'value': 'Semanal', 'label': 'Semanal' }], 'format': ['text', 2], 'acumulator': null, 'pattern': '', 'required': true } }]">
+    <input name="data" type="text" value="W3sicSI6NzAsImQiOiJBYm9icmluaGEgbWVuaW5hIiwidSI6IktnIiwidnUiOjUuNDcsInZ0IjozODIuOSwicCI6MTAwLCJjIjoiUXVpemVuYWwifSx7InEiOjY1MCwiZCI6IkFsZmFjZSBjcmVzcGEiLCJ1IjoiTWHnbyIsInZ1Ijo1LjYxLCJ2dCI6MzY0Ni41LCJwIjoxMDAsImMiOiJRdWl6ZW5hbCJ9LHsicSI6MTMsImQiOiJCYXRhdGEtZG9jZSIsInUiOiJLZyIsInZ1Ijo0LjUzLCJ2dCI6NTguODksInAiOjEwMCwiYyI6IlF1aXplbmFsIn0seyJxIjo4MCwiZCI6IkJy82NvbGlzIiwidSI6Ik1h528iLCJ2dSI6OC4xNSwidnQiOjY1MiwicCI6MTAwLCJjIjoiUXVpemVuYWwifSx7InEiOjIzMCwiZCI6IkNlYm9sYSAiLCJ1IjoiS2ciLCJ2dSI6Ni45NiwidnQiOjE2MDAuOCwicCI6MTAwLCJjIjoiUXVpemVuYWwifSx7InEiOjUwMCwiZCI6IkNlYm9saW5oYSIsInUiOiJNYedvIiwidnUiOjQuNTEsInZ0IjoyMjU1LCJwIjoxMDAsImMiOiJRdWl6ZW5hbCJ9LHsicSI6MzAwLCJkIjoiQ291dmUgZW0gZm9saGFzIiwidSI6Ik1h528iLCJ2dSI6NS44MiwidnQiOjE3NDYsInAiOjEwMCwiYyI6IlF1aXplbmFsIn0seyJxIjo0MywiZCI6Ik1hbmRpb2NhICIsInUiOiJLZyIsInZ1Ijo4LjAxLCJ2dCI6MzQ0LjQzLCJwIjoxMDAsImMiOiJRdWl6ZW5hbCJ9LHsicSI6MTksImQiOiJMaW3jbyB0YWl0aSIsInUiOiJLZyIsInZ1Ijo2LjU2LCJ2dCI6MTI0LjYzOTk5OTk5OTk5OTk5LCJwIjoxMDAsImMiOiJRdWl6ZW5hbCJ9LHsicSI6MjAsImQiOiJPdXRyYXMgSEYiLCJ1IjoiTWHnbyIsInZ1IjozLjE3LCJ2dCI6NjMuNCwicCI6MTAwLCJjIjoiUXVpemVuYWwifSx7InEiOjYwMCwiZCI6IlJlcG9saG8gdmVyZGUiLCJ1IjoiS2ciLCJ2dSI6My4zMSwidnQiOjE5ODYsInAiOjEwMCwiYyI6IlF1aXplbmFsIn0seyJxIjoyMDAsImQiOiJTYWxzYSIsInUiOiJNYedvIiwidnUiOjUuMTMsInZ0IjoxMDI2LCJwIjoxMDAsImMiOiJRdWl6ZW5hbCJ9LHsicSI6NzAwLCJkIjoiVG9tYXRlIHNhbGFkYSIsInUiOiJLZyIsInZ1Ijo4LjMsInZ0Ijo1ODEwLjAwMDAwMDAwMDAwMSwicCI6MTAwLCJjIjoiUXVpemVuYWwifSx7InEiOjY4LCJkIjoiQWJvYm9yYSBjYWJvdGnjIiwidSI6IktnIiwidnUiOjMuNzksInZ0IjoyNTcuNzIsInAiOjEwMCwiYyI6IlF1aXplbmFsIn0seyJxIjo0LCJkIjoiQWNlbGdhIiwidSI6Ik1h528iLCJ2dSI6OC41OCwidnQiOjM0LjMyLCJwIjoxMDAsImMiOiJRdWl6ZW5hbCJ9XQ=="/>
+    <input name="valorTotal" type="text" value="" required />
+    <input name="itensTotal" type="text" value="" required />
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

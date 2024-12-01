@@ -1,0 +1,170 @@
+$background_litle: #272727
+$background: #232323
+$background_deep: #191919
+$text: #b3b3b3
+$placeholder: #cbcbcb
+$placeholder_deep: #6b6b6b
+
+$border: #2c2c2c
+
+$theme1: #bf611b
+$theme2: #1378ca
+$theme3: firebrick
+$selected: #43a564 //#4f7038
+
+@font-face
+    font-family: 'icons'
+    font-style: normal
+    font-weight: 400
+    src: url("icons.woff2")
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    background: $background_deep
+    font-family: "Open Sans",Helvetica,"Lucida Sans Unicode","Lucida Grande",Arial,Verdana,sansSerif
+    letter-spacing: 1.2
+    padding: 2rem
+    background: #191919
+
+    body
+        height: 100vh
+        width: 100%
+        overflow: hidden
+        background: #191919
+
+        div.subTable
+            & > input
+                display: none
+            &:has(input:invalid) > div.content
+                box-shadow: 0 0 2rem 0 rgba($theme3, .4)
+                
+            & > div.content
+                display: flex
+                gap: .5rem
+                flex-direction: column
+                padding: 1rem
+                border: 1px solid $border
+                background: $background_litle
+                border-radius: .5rem
+                & > div
+                    display: grid
+                    align-items: center
+                    & > span
+                        padding: 0 .2rem
+                    &.header
+                        &::before
+                            content: '#'
+                        color: $text
+                        font-size: 1.3rem
+                        text-align: center
+                        color: $placeholder_deep
+                        background: $background_deep
+                        padding: .5rem
+                        border-radius: .5rem
+                        & > span
+                            &:last-child
+                                grid-column: -3 / -1
+                            
+                    &.body
+                        color: $text
+                        font-size: 1.6rem
+                        text-align: center
+                        & > button
+                            font-family: icons
+                            color: $theme1
+                            font-size: 2rem
+                            border: none
+                            background: none
+                            cursor: pointer
+                        & > span
+                            color: inherith
+                            &:first-child
+                                color: $placeholder_deep
+                                font-size: 1.2rem
+                               
+                    &.new
+                        border: 1px solid $border
+                        border-radius: 0.5rem
+                        & > button
+                            font-family: icons
+                            color: $theme1
+                            border: none
+                            background: none
+                            font-size: 2rem
+                            cursor: pointer
+                            width: 3rem
+                            justify-self: center
+                    &.form
+                        
+                        &::before
+                            content: ''
+                        border-radius: .5rem
+                        gap: .5rem
+                        & > select,
+                        & > input,
+                        & > span
+                            background: mix($selected,$background_litle,50%)
+                            border: none
+                            text-align: center
+                            color: $text
+                            width: 100%
+                            outline: none
+                            border-radius: .5rem
+                            height: 2rem
+                            font-size: 1.5rem
+                            &:focus
+                                background: mix($selected,$background_litle,30%)
+                            &:invalid
+                                background: mix($theme3,$background_litle,30%) 
+                        & > span
+                            background: none
+                        & > button
+                            font-family: icons
+                            color: mix($selected,$background_litle,70%)
+                            border: none
+                            background: none
+                            cursor: pointer
+                            font-size: 2rem
+                            outline: none
+                            &:focus
+                                color: mix($selected,$background_litle,30%)
+                        &:has(input:invalid, select:invalid) 
+                            button
+                                &:first-of-type
+                                    color: mix($theme3,$background_litle,70%)
+                                    pointer-events: none
+                                  
+
+                    &.footer
+                        font-size: 1.6rem
+                        text-align: center
+                        & > button
+                            font-family: icons
+                            color: $theme1
+                            border: none
+                            background: none
+                            cursor: pointer
+                        & > span
+                            height: 1.8rem
+                            &:first-of-type
+                                border-top-left-radius: 0.5rem
+                                border-bottom-left-radius: 0.5rem
+                            &:last-of-type
+                                border-top-right-radius: 0.5rem
+                                border-bottom-right-radius: 0.5rem
+                            &.null
+                                background: $background_deep
+                            &.notNull
+                                color: $theme1
+                                & + span 
+                                    border-top-left-radius: 0.5rem
+                                    border-bottom-left-radius: 0.5rem
+                            &:not(.notNull):has(+ .notNull)
+                                border-top-right-radius: 0.5rem
+                                border-bottom-right-radius: 0.5rem
+                                    

@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("icons.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background: #191919;
+  font-family: "Open Sans", Helvetica, "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, sansSerif;
+  letter-spacing: 1.2;
+  padding: 2rem;
+  background: #191919;
+}
+html body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #191919;
+}
+html body div.subTable > input {
+  display: none;
+}
+html body div.subTable:has(input:invalid) > div.content {
+  -webkit-box-shadow: 0 0 2rem 0 rgba(178, 34, 34, 0.4);
+          box-shadow: 0 0 2rem 0 rgba(178, 34, 34, 0.4);
+}
+html body div.subTable > div.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #2c2c2c;
+  background: #272727;
+  border-radius: 0.5rem;
+}
+html body div.subTable > div.content > div {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body div.subTable > div.content > div > span {
+  padding: 0 0.2rem;
+}
+html body div.subTable > div.content > div.header {
+  color: #b3b3b3;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #6b6b6b;
+  background: #191919;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+html body div.subTable > div.content > div.header::before {
+  content: "#";
+}
+html body div.subTable > div.content > div.header > span:last-child {
+  grid-column: -3/-1;
+}
+html body div.subTable > div.content > div.body {
+  color: #b3b3b3;
+  font-size: 1.6rem;
+  text-align: center;
+}
+html body div.subTable > div.content > div.body > button {
+  font-family: icons;
+  color: #bf611b;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+html body div.subTable > div.content > div.body > span {
+  color: inherith;
+}
+html body div.subTable > div.content > div.body > span:first-child {
+  color: #6b6b6b;
+  font-size: 1.2rem;
+}
+html body div.subTable > div.content > div.new {
+  border: 1px solid #2c2c2c;
+  border-radius: 0.5rem;
+}
+html body div.subTable > div.content > div.new > button {
+  font-family: icons;
+  color: #bf611b;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 3rem;
+  justify-self: center;
+}
+html body div.subTable > div.content > div.form {
+  border-radius: 0.5rem;
+  gap: 0.5rem;
+}
+html body div.subTable > div.content > div.form::before {
+  content: "";
+}
+html body div.subTable > div.content > div.form > select, html body div.subTable > div.content > div.form > input, html body div.subTable > div.content > div.form > span {
+  background: #356646;
+  border: none;
+  text-align: center;
+  color: #b3b3b3;
+  width: 100%;
+  outline: none;
+  border-radius: 0.5rem;
+  height: 2rem;
+  font-size: 1.5rem;
+}
+html body div.subTable > div.content > div.form > select:focus, html body div.subTable > div.content > div.form > input:focus, html body div.subTable > div.content > div.form > span:focus {
+  background: #2f4d39;
+}
+html body div.subTable > div.content > div.form > select:invalid, html body div.subTable > div.content > div.form > input:invalid, html body div.subTable > div.content > div.form > span:invalid {
+  background: #512626;
+}
+html body div.subTable > div.content > div.form > span {
+  background: none;
+}
+html body div.subTable > div.content > div.form > button {
+  font-family: icons;
+  color: #3b7f52;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
+}
+html body div.subTable > div.content > div.form > button:focus {
+  color: #2f4d39;
+}
+html body div.subTable > div.content > div.form:has(input:invalid, select:invalid) button:first-of-type {
+  color: #882424;
+  pointer-events: none;
+}
+html body div.subTable > div.content > div.footer {
+  font-size: 1.6rem;
+  text-align: center;
+}
+html body div.subTable > div.content > div.footer > button {
+  font-family: icons;
+  color: #bf611b;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+html body div.subTable > div.content > div.footer > span {
+  height: 1.8rem;
+}
+html body div.subTable > div.content > div.footer > span:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+html body div.subTable > div.content > div.footer > span:last-of-type {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+html body div.subTable > div.content > div.footer > span.null {
+  background: #191919;
+}
+html body div.subTable > div.content > div.footer > span.notNull {
+  color: #bf611b;
+}
+html body div.subTable > div.content > div.footer > span.notNull + span {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+html body div.subTable > div.content > div.footer > span:not(.notNull):has(+ .notNull) {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
